@@ -9,11 +9,21 @@ enum Period{
      YEARS,
      LIFETIME;
  }
- enum Frequency{
-     FOUR_HOURS,
-     ONCE_A_DAY,
-     PRN;
- }
+ //enum Frequency{
+ //    FOUR_HOURS,
+ //    ONCE_A_DAY,
+ //    PRN;
+ //}
+
+// if in case asked not to use enums. I tried this when you slept
+class Frequency {
+  private final String name;
+  public Frequency(String name) { this.name = name; }
+  public String toString() { return name; }
+  public static final Frequency FOUR_HOURS = new Frequency("FOUR_HOURS");
+  public static final Frequency ONCE_A_DAY = new Frequency("ONCE_A_DAY");
+  public static final Frequency PRN = new Frequency("PRN");
+}
 public class Medication {
 private String medicineName;
 private Date startDate;
