@@ -4,6 +4,9 @@ import java.util.List;
 
 public class Allergy {
   private String name;
+  private String sex;
+  private int age;
+
   private List<String> symptoms;
 
   public String getName() {
